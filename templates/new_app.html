@@ -1,0 +1,67 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CODING DEVELOPERS</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+         <img src="{% static 'img/logo.png' %}" alt="Company Logo" width="45" height="25">
+         <p class="logo-text">CODING DEVELOPERS</p>
+         <form action="{% url 'search' %}" method="GET">
+            <input type="text" name="query" placeholder="Search">
+            <button type="Submit" class="Button" style="background-color: #bdc2c7;">Search</button>
+         </form>
+        </div>
+    </header>
+    <div class="sidebar">
+            <ul>
+                <li class="item">
+                    <a href="#">
+		            <i class="menu-icon fa fa-book"></i>
+		            <span>Выбор языков</span>
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="#">
+                        <i class="menu-icon fa fa-graduation-cap"></i>
+                        <span>Мои предметы</span>
+                    </a>
+                </li>
+                <li class="item">
+	                <a href="#">
+                        <i class="menu-icon fa fa-calendar"></i>
+		                <span>Расписание</span>
+	                </a>
+                </li>
+                <li class="item">
+	                <a href="#">
+		                <i class="menu-icon fa fa-calculator"></i>
+		                <span>Переобучение</span>
+	                </a>
+                </li>
+                <li class="item">
+                    <a href="#">
+		                <i class="menu-icon fa fa-question-circle"></i>
+		                <span>Итоговый</span>
+                    </a>
+                </li>
+                <li class="item">
+                	<a href="#">
+                		<i class="menu-icon fa fa-info-circle"></i>
+                		<span>Индивидуальный учебный план</span>
+                	</a>
+                </li>
+            </ul>
+    </div>
+    {% for task in tasks %}
+        <h1>{{ task.title }}</h1>
+        <p>{{ task.task_text }}</p>
+        <p>{{ task.created_at }}</p>
+    {% endfor %}
+</body>
+</html>

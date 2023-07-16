@@ -1,0 +1,90 @@
+header {
+  background-color: #002137;  /* Изменение цвета фона в заголовке */
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2.135cm;
+  width: 100%;
+}
+
+header p {
+  color: white;  /* Изменение цвета текста в заголовке */
+}
+
+.menu-icon {
+  margin-right: 10px;  /* Добавление отступа справа для иконок меню */
+}
+
+.item {
+  margin-bottom: 15px;  /* Добавление отступа снизу для элементов списка */
+}
+
+header form {
+  position: absolute;
+  top: 50%;
+  right: 250px;
+  transform: translateY(-50%);  /* Расположение формы поиска в вертикальном центре */
+}
+
+.sidebar {
+  color: white;  /* Изменение цвета текста в боковой панели */
+}
+
+.sidebar ul {
+  list-style: none;
+  padding-left: 30px;  /* Отступ слева для элементов списка */
+  margin: 30;  /* Внешний отступ для боковой панели */
+}
+
+.sidebar ul::before {
+  content: "";  /* Изменение иконки перед элементами списка */
+  display: inline-block;
+  padding-left: 10px;  /* Отступ слева для иконки */
+  margin-right: 10px;  /* Отступ справа между иконкой и текстом */
+  color: white;  /* Изменение цвета иконки */
+}
+
+.sidebar li a {
+  text-decoration: none;
+  color: white;  /* Изменение цвета ссылок в боковой панели */
+}
+
+.sidebar li a:visited {
+  color: white;  /* Изменение цвета посещенных ссылок в боковой панели */
+}
+
+.header-content {
+  display: flex;
+  align-items: center;  /* Выравнивание элементов в заголовке по центру */
+}
+
+.logo-text {
+  position: absolute;
+  top: 18%;  /* Расположение текста логотипа в заголовке */
+  margin-left: 100px;  /* Отступ слева для текста логотипа */
+}
+
+header img {
+  position: absolute;
+  top: 35%;  /* Расположение логотипа в заголовке */
+  right: 1450px;  /* Отступ справа для логотипа */
+}
+
+.sidebar-student {
+  position: absolute;
+  right: 99;  /* Расположение элемента "sidebar-student" в правом верхнем углу */
+  top: 2%;  /* Расположение элемента "sidebar-student" в правом верхнем углу */
+}
+
+.sidebar {
+  background-color: #191970;  /* Изменение цвета фона в боковой панели */
+  width: 240px;
+  height: 100vh;
+  position: fixed;
+  top: 80;
+  left: 0;
+}
+
+.content {
+  margin-left: 200px;  /* Отступ слева для контента */
+}
