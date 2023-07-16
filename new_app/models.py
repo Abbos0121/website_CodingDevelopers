@@ -16,7 +16,7 @@ class Tasks(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     status = models.BooleanField(default=False)
-    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE, default=1)
+    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE, null=True)
 
     def __str__(self):
         return self.title

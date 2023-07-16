@@ -41,10 +41,11 @@ def taskView(request):
                             task = Tasks.objects.get(id=id)
                             task.delete()
         return redirect('/')
-    tasks = Tasks.objects.filter(user=user.id)
+    #tasks = Tasks.objects.filter(user=user.id)
+    tasks = Tasks.objects.filter()
     return render(request, "task/tasks.html", context={"tasks": tasks})
 
-
+@login_required(login_url="/login")
 def newApp(request):
     tasks = Tasks.objects.all()
     return render(request, "new_app.html", context={"tasks": tasks})
