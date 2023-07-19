@@ -1,13 +1,20 @@
 {% load static %}
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>CODING DEVELOPERS</title>
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body>
+    <div>
+        <h2 class="text-body">Hello programmer</h2>
+        <h4 class="text-body2">Here you will find useful information!</h4>
+        <img class="png1" src="{% static 'img/png1.png' %}" alt="Prosto png" width="350" height="350">
+    </div>
     <header>
         <div class="header-content">
          <img src="{% static 'img/logo.png' %}" alt="Company Logo" width="45" height="25">
@@ -16,53 +23,59 @@
             <input type="text" name="query" placeholder="Search">
             <button type="Submit" class="Button" style="background-color: #bdc2c7;">Search</button>
          </form>
-            <button class="btn btn-danger"><a href="/logout">Logout</a> </button>
+            <li>
+                <a href="/logout">
+                    <button class="itemlog">Logout</button>
+                </a>
+            </li>
         </div>
     </header>
     <div class="sidebar">
+        <h3>DEVELOPERS</h3>
             <ul>
                 <li class="item">
-                    <a href="#">
+                    <a href="https://medium.com/web-development-zone/a-complete-list-of-computer-programming-languages-1d8bc5a891f">
 		            <i class="menu-icon fa fa-book"></i>
-		            <span>Выбор языков</span>
+		            <span>Languge selection</span>
                     </a>
                 </li>
                 <li class="item">
-                    <a href="#">
+                    <a href="https://youtu.be/66tfvFeALBQ">
                         <i class="menu-icon fa fa-graduation-cap"></i>
-                        <span>Мои предметы</span>
+                        <span class="study">Study guide</span>
                     </a>
                 </li>
                 <li class="item">
-	                <a href="#">
+	                <a href="https://rasp.yandex.uz/">
                         <i class="menu-icon fa fa-calendar"></i>
-		                <span>Расписание</span>
+		                <span>Shedule</span>
 	                </a>
                 </li>
                 <li class="item">
-	                <a href="#">
-		                <i class="menu-icon fa fa-calculator"></i>
-		                <span>Переобучение</span>
-	                </a>
-                </li>
-                <li class="item">
-                    <a href="#">
+                    <a href="https://www.google.com/">
 		                <i class="menu-icon fa fa-question-circle"></i>
-		                <span>Итоговый</span>
+		                <span>Questions</span>
                     </a>
                 </li>
                 <li class="item">
-                	<a href="#">
-                		<i class="menu-icon fa fa-info-circle"></i>
-                		<span>Индивидуальный учебный план</span>
+                	<a href="https://t.me/abbos010101">
+                		<i class="fa fa-envelope"></i>
+                		<span class="contact">Contact me</span>
                 	</a>
                 </li>
+                <li class="item">
+                	<a href="https://youtu.be/zOjov-2OZ0E">
+                		<i class="menu-icon fa fa-info-circle"></i>
+                		<span>Information</span>
+                	</a>
+                </li>
+                <div class="social-icons" id="icons-icons">
+                    <a href="https://t.me/abbos010101" target="_blank" rel="noopener noreferrer"><i class="fab fa-telegram icons"></i></a>
+                    <a href="https://twitter.com/madmurotov" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter icons"></i></a>
+                    <a href="https://www.instagram.com/abbos_madmurotov" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram icons"></i></a>
+                    <a href="https://discord.com/users/{AB_M}#{ab_m010101}" target="_blank" rel="noopener noreferrer"><i class="fab fa-discord icons"></i></a>
+                </div>
             </ul>
     </div>
-    {% for task in tasks %}
-        <h1>{{ task.title }}</h1>
-        <p>{{ task.task_text }}</p>
-        <p>{{ task.created_at }}</p>
-    {% endfor %}
 </body>
 </html>

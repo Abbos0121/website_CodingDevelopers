@@ -8,3 +8,6 @@ urlpatterns = [
     path('', include('new_app.urls')),
     path('', include('account.urls'))
 ]
+
+
+#CORE URLS.PY

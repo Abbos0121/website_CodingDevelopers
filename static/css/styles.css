@@ -70,12 +70,6 @@ header img {
   right: 1450px;  /* Отступ справа для логотипа */
 }
 
-.sidebar-student {
-  position: absolute;
-  right: 99;  /* Расположение элемента "sidebar-student" в правом верхнем углу */
-  top: 2%;  /* Расположение элемента "sidebar-student" в правом верхнем углу */
-}
-
 .sidebar {
   background-color: #191970;  /* Изменение цвета фона в боковой панели */
   width: 240px;
@@ -85,6 +79,60 @@ header img {
   left: 0;
 }
 
+.sidebar >h3 {
+  margin-left: 60px;
+  color: white;
+}
+
 .content {
   margin-left: 200px;  /* Отступ слева для контента */
 }
+
+
+.icons {
+  margin-right: 15px;
+  margin-top: 310px;
+  color: white;
+}
+
+
+.itemlog {
+  position: absolute;
+  margin-top: 30px;
+  margin-left: 1425px;
+  color: red;
+}
+
+.contact {
+  position: absolute;
+  margin-left: 15px;
+}
+
+.study {
+  position: absolute;
+  margin-right: 5px;
+}
+
+.text-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: black
+  max-width: 600px;
+}
+
+.text-body2 {
+  position: absolute;
+  top: 370px;
+  left: 630px;
+
+}
+
+.png1 {
+  position: absolute;
+  left: 1150px;
+  top: 210px;
+}
+
+

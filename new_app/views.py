@@ -5,6 +5,9 @@ from django.contrib.auth import logout
 # Create your views here.
 
 
+#NEW_APP VIEWS.PY
+
+
 def deleteTask(request, pk):
     task = Tasks.objects.get(id=pk)
     task.delete()
